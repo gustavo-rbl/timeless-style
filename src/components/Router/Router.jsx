@@ -19,13 +19,16 @@ import Contact from "../../pages/Company/Contact/Contact";
 import PrivacyPolicy from "../../pages/Company/PrivacyPolicy/PrivacyPolicy";
 import NotFound from "../../pages/Error/NotFound/NotFound";
 
+// loader
+import ProductsLoader from "../../loader/ProductsLoader";
+
 function Router() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Home />} />
-        <Route path="products" element={<Products />} />
-        <Route path="products/:id" element={<Product />} />
+        <Route path="products" element={<Products />} loader={ProductsLoader} />
+        <Route path="products/:id" element={<Product />} loader={ProductsLoader} />
 
         <Route path="company" element={<CompanyLayout />}>
           <Route index element={<About />} />
