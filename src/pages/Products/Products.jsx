@@ -30,6 +30,8 @@ function Products() {
         </button>
       ))}
 
+      {typeFilter && <button onClick={() => setSearchParams({})}>Clear Filter</button>}
+
       {displayedProducts.map((product) => (
         <div key={nanoid()}>
           <p>{product.category.toUpperCase()}</p>
