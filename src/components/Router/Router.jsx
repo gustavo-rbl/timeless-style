@@ -18,6 +18,7 @@ import About from "../../pages/Company/About/About";
 import Contact from "../../pages/Company/Contact/Contact";
 import PrivacyPolicy from "../../pages/Company/PrivacyPolicy/PrivacyPolicy";
 import NotFound from "../../pages/Error/NotFound/NotFound";
+import ProductError from "../../pages/Error/ProductError/ProductError";
 
 // loader
 import ProductsLoader from "../../loader/ProductsLoader";
@@ -27,8 +28,20 @@ function Router() {
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Home />} />
-        <Route path="products" element={<Products />} loader={ProductsLoader} />
-        <Route path="products/:id" element={<Product />} loader={ProductsLoader} />
+
+        <Route
+          path="products"
+          element={<Products />}
+          loader={ProductsLoader}
+          errorElement={<ProductError />}
+        />
+
+        <Route
+          path="products/:id"
+          element={<Product />}
+          loader={ProductsLoader}
+          errorElement={<ProductError />}
+        />
 
         <Route path="company" element={<CompanyLayout />}>
           <Route index element={<About />} />
