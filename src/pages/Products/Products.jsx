@@ -1,13 +1,36 @@
 import { nanoid } from "nanoid";
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, useLoaderData, useSearchParams } from "react-router-dom";
 import { HandleDiscount } from "../../modules/HandleDiscount";
+import MakeSlug from "../../modules/MakeSlug";
 
 function Products() {
+  // fetched products
   const products = useLoaderData();
+
+  // search params
+  const [searchParams, setSearchParams] = useSearchParams();
+  const typeFilter = searchParams.get("category");
+
+  // make a new set based on categories received from the api
+  const categories = [...new Set(products.map((x) => x.category))];
+
+  // filter products
+  const displayedProducts = typeFilter
+    ? products.filter((product) => MakeSlug(product.category) === typeFilter)
+    : products;
 
   return (
     <>
-      {products.map((product) => (
+      {categories.map((category) => (
+        <button
+          key={nanoid()}
+          onClick={() => setSearchParams({ category: `${MakeSlug(category)}` })}
+        >
+          {category}
+        </button>
+      ))}
+
+      {displayedProducts.map((product) => (
         <div key={nanoid()}>
           <p>{product.category.toUpperCase()}</p>
 
