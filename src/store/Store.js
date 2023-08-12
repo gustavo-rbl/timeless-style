@@ -14,7 +14,7 @@ const useCartStore = create((set, get) => ({
     set({
       cart: [],
     }),
-  getTotal: () => get().cart.reduce((total, item) => total + item.price, 0),
+  getTotal: () => get().cart.reduce((total, item) => total + item.total, 0),
 }));
 
 export default useCartStore;
