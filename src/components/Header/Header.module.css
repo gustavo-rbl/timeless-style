@@ -31,16 +31,17 @@
 .navLinks {
   composes: resetUl from "../../css/Index.module.css";
   composes: displayFlex from "../../css/Index.module.css";
-  composes: flexColumn from "../../css/Index.module.css";
   composes: flexCenter from "../../css/Index.module.css";
+  flex-direction: column;
   gap: var(--size-3);
   padding: var(--size-5) var(--size-1) var(--size-3);
 }
 
 .navLink {
+  background-color: var(--clr-accent-2);
+  color: var(--clr-gray-0);
   border-radius: var(--brd-rad-pri);
   border: 1px solid var(--clr-gray-9);
-  color: var(--clr-gray-9);
   padding: calc(var(--size-0) / 4) var(--size-1);
   text-decoration: none;
   transition: all var(--pri-transition);
@@ -48,8 +49,8 @@
 
 .active,
 .navLink:hover {
-  background-color: var(--clr-accent-1);
-  border-color: transparent;
+  background-color: var(--clr-gray-0);
+  color: var(--clr-accent-2);
 }
 
 @media (min-width: 768px) {
@@ -78,8 +79,10 @@
   }
 
   .navLink {
+    background-color: inherit;
     border-radius: 0;
     border: none;
+    color: inherit;
     padding: 0;
   }
 
