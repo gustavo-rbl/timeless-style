@@ -33,6 +33,12 @@ function Header() {
 
       <nav className={`${style.nav} ${isToggle ? style.navActive : null}`}>
         <ul className={style.navLinks} onClick={handleExpanded}>
+          <li className={style.homeMobile}>
+            <NavLink to="." className={({ isActive }) => (isActive ? style.active : style.navLink)}>
+              Home
+            </NavLink>
+          </li>
+
           <li>
             <NavLink
               to="products"

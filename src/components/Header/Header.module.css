@@ -100,4 +100,8 @@
     background-color: transparent;
     box-shadow: var(--box-shadow-inset);
   }
+
+  .homeMobile {
+    display: none;
+  }
 }
