@@ -8,7 +8,7 @@ const useCartStore = create((set, get) => ({
     })),
   deleteFromCart: (id) =>
     set((store) => ({
-      cart: store.cart.filter((item) => item.id !== id),
+      cart: store.cart.filter((item) => item.orderID !== id),
     })),
   clearCart: () =>
     set({
