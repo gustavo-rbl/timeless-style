@@ -1,0 +1,100 @@
+.hamburgerMenu {
+  composes: size2 from "../../css/Index.module.css";
+  composes: iconV01 from "../../css/Index.module.css";
+  composes: cursorPointer from "../../css/Index.module.css";
+  inset: 0 var(--size-0);
+  position: absolute;
+}
+
+.hero {
+  text-align: center;
+  line-height: 1.5;
+}
+
+.cart {
+  composes: size2 from "../../css/Index.module.css";
+  composes: iconV01 from "../../css/Index.module.css";
+  inset: 0 var(--size-0) 0 auto;
+  position: absolute;
+}
+
+.nav {
+  max-height: 0;
+  overflow: hidden;
+  transition: all var(--pri-transition);
+}
+
+.navActive {
+  max-height: 100vh;
+}
+
+.navLinks {
+  composes: resetUl from "../../css/Index.module.css";
+  composes: displayFlex from "../../css/Index.module.css";
+  composes: flexColumn from "../../css/Index.module.css";
+  composes: flexCenter from "../../css/Index.module.css";
+  gap: var(--size-3);
+  padding: var(--size-5) var(--size-1) var(--size-3);
+}
+
+.navLink {
+  border-radius: var(--brd-rad-pri);
+  border: 1px solid var(--clr-gray-9);
+  color: var(--clr-gray-9);
+  padding: calc(var(--size-0) / 4) var(--size-1);
+  text-decoration: none;
+  transition: all var(--pri-transition);
+}
+
+.active,
+.navLink:hover {
+  background-color: var(--clr-accent-1);
+  border-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: var(--size-1);
+  }
+
+  .hamburgerMenu {
+    display: none;
+  }
+
+  .hero {
+    text-align: left;
+  }
+
+  .nav {
+    max-height: max-content;
+  }
+
+  .navLinks {
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .navLink {
+    border-radius: 0;
+    border: none;
+    padding: 0;
+  }
+
+  .navLink:hover {
+    background-color: transparent;
+    box-shadow: var(--box-shadow-inset);
+  }
+
+  .cart {
+    position: static;
+  }
+
+  .active {
+    composes: navLink;
+    background-color: transparent;
+    box-shadow: var(--box-shadow-inset);
+  }
+}
