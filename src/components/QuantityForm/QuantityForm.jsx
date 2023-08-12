@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import useCartStore from "../../store/Store";
 import { HandleDiscount } from "../../modules/HandleDiscount";
 import { nanoid } from "nanoid";
+import Loading from "../Loading/Loading";
 
 function QuantityForm({ product }) {
   // state
@@ -68,7 +69,7 @@ function QuantityForm({ product }) {
 
       <br />
 
-      <button>{loading ? "Loading..." : "Add to cart"}</button>
+      {loading ? <Loading /> : <button>Add to cart</button>}
     </form>
   );
 }
