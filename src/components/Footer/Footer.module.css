@@ -1,0 +1,52 @@
+.footer {
+  composes: displayFlex from "../../css/Index.module.css";
+  composes: flexCenter from "../../css/Index.module.css";
+  composes: flexColumn from "../../css/Index.module.css";
+  background-color: var(--clr-accent-1);
+  color: var(--clr-gray-9);
+  margin-top: var(--size-3);
+}
+
+.services {
+  composes: displayFlex from "../../css/Index.module.css";
+  composes: flexCenter from "../../css/Index.module.css";
+  composes: flexColumn from "../../css/Index.module.css";
+  composes: gap from "../../css/Index.module.css";
+  composes: resetUl from "../../css/Index.module.css";
+  gap: var(--size-1);
+}
+
+.social {
+  composes: resetUl from "../../css/Index.module.css";
+  composes: displayFlex from "../../css/Index.module.css";
+  composes: flexRow from "../../css/Index.module.css";
+  composes: flexCenter from "../../css/Index.module.css";
+  gap: var(--size-2);
+}
+
+.social a {
+  font-size: var(--size-2);
+}
+
+.footer a {
+  color: var(--clr-gray-9);
+  text-decoration: none;
+  transition: all var(--pri-transition);
+}
+
+.footer a:hover {
+  box-shadow: var(--box-shadow-inset);
+}
+
+@media (min-width: 768px) {
+  .footer {
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-block: var(--size-3);
+  }
+
+  .services {
+    align-items: flex-start;
+  }
+}

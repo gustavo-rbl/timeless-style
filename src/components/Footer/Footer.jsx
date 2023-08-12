@@ -1,14 +1,15 @@
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaSquareYoutube, FaTwitter } from "react-icons/fa6";
+import style from "./Footer.module.css";
 
 function Footer() {
   return (
-    <footer>
+    <footer className={style.footer}>
       <div>
         <h3>Customer Service</h3>
 
         <nav>
-          <ul>
+          <ul className={style.services}>
             <li>
               <Link to="#">FAQs</Link>
             </li>
@@ -28,7 +29,7 @@ function Footer() {
         <h3>Credit Card</h3>
 
         <nav>
-          <ul>
+          <ul className={style.services}>
             <li>
               <Link to="#">Pay</Link>
             </li>
@@ -56,7 +57,7 @@ function Footer() {
         <h3>Connect With us</h3>
 
         <nav>
-          <ul>
+          <ul className={style.social}>
             <li>
               <Link to="#">
                 <FaFacebookF />
