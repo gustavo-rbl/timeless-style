@@ -28,16 +28,6 @@
   margin: auto;
 }
 
-.discount {
-  color: var(--clr-accent-2);
-  font-size: var(--size-fluid-2);
-}
-
-.originalPrice {
-  color: var(--clr-gray-5);
-  text-decoration: line-through;
-}
-
 .productTitle {
   max-width: 200px;
   white-space: nowrap;

@@ -51,8 +51,8 @@ function Products() {
             <img src={product.image} alt={product.title} className={style.productsImg} />
 
             <p>
-              <span className={style.discount}>${HandleDiscount(product.price)}</span>{" "}
-              <span className={style.originalPrice}>${product.price}</span>
+              <span className={IndexStyle.discount}>${HandleDiscount(product.price)}</span>{" "}
+              <span className={IndexStyle.originalPrice}>${product.price}</span>
             </p>
 
             <h4 className={style.productTitle}>{product.title}</h4>
