@@ -49,11 +49,31 @@
   color: var(--clr-accent-1);
 }
 
+.promos {
+  composes: displayFlex from "../../css/Index.module.css";
+  gap: var(--size-2);
+}
+
+.promo {
+  flex: 1;
+  flex-basis: 100%;
+  border: 1px solid var(--clr-gray-9);
+  border-radius: calc(var(--brd-rad-pri) * 2);
+  padding: var(--size-1);
+}
+
+.promoIcon {
+  composes: backgroundClrPri from "../../css/Index.module.css";
+  border-radius: 50%;
+  font-size: var(--size-3);
+  padding: var(--size-0);
+}
+
 .signUp {
   composes: displayFlex from "../../css/Index.module.css";
+  composes: gap from "../../css/Index.module.css";
   justify-content: center;
   align-items: center;
-  gap: var(--size-1);
   margin-block: var(--size-3);
 }
 
@@ -78,5 +98,9 @@
   .stories {
     flex-direction: row;
     align-items: flex-start;
+  }
+
+  .promo {
+    flex-basis: 30%;
   }
 }

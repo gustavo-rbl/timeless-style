@@ -3,6 +3,7 @@ import { discount } from "../../modules/HandleDiscount";
 import { add, format } from "date-fns";
 import style from "./Home.module.css";
 import IndexStyle from "../../css/Index.module.css";
+import { FaShirt, FaTruckFast, FaTicket } from "react-icons/fa6";
 
 function Home() {
   return (
@@ -98,6 +99,38 @@ function Home() {
             <Link to="/" className={style.storyLink}>
               Read More
             </Link>
+          </div>
+        </div>
+      </div>
+
+      <div className={IndexStyle.textCenter}>
+        <h2>
+          Why <span className={IndexStyle.gradientText}>TimelessStyle</span>
+        </h2>
+
+        <div className={style.promos}>
+          <div className={style.promo}>
+            <FaShirt className={style.promoIcon} />
+
+            <h4>Premium Products</h4>
+
+            <p>Our products are 100% made with high quality materials.</p>
+          </div>
+
+          <div className={style.promo}>
+            <FaTruckFast className={style.promoIcon} />
+
+            <h4>Free Shipping</h4>
+
+            <p>We ship all over the United States for FREE.</p>
+          </div>
+
+          <div className={style.promo}>
+            <FaTicket className={style.promoIcon} />
+
+            <h4>Exciting Offers</h4>
+
+            <p>We provide amazing offers & discounts.</p>
           </div>
         </div>
       </div>
