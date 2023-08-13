@@ -1,0 +1,66 @@
+.filterNav {
+  composes: resetUl from "../../css/Index.module.css";
+  composes: displayFlex from "../../css/Index.module.css";
+  composes: gap from "../../css/Index.module.css";
+  flex-direction: column;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.displayedProducts {
+  composes: gap from "../../css/Index.module.css";
+  display: grid;
+}
+
+.product {
+  composes: priBorder from "../../css/Index.module.css";
+  padding: 0 var(--size-1);
+}
+
+.productCategory {
+  composes: textRight from "../../css/Index.module.css";
+  composes: colorGray5 from "../../css/Index.module.css";
+}
+
+.productsImg {
+  width: 35%;
+  aspect-ratio: 1;
+  margin: auto;
+}
+
+.discount {
+  color: var(--clr-accent-2);
+  font-size: var(--size-fluid-2);
+}
+
+.originalPrice {
+  color: var(--clr-gray-5);
+  text-decoration: line-through;
+}
+
+.productTitle {
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.productDetails {
+  composes: displayFlex from "../../css/Index.module.css";
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .filterNav {
+    flex-direction: row;
+  }
+
+  .displayedProducts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .productTitle {
+    max-width: 300px;
+  }
+}

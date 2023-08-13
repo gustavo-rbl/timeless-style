@@ -2,6 +2,8 @@ import { nanoid } from "nanoid";
 import { Link, useLoaderData, useSearchParams } from "react-router-dom";
 import { HandleDiscount } from "../../modules/HandleDiscount";
 import MakeSlug from "../../modules/MakeSlug";
+import style from "./Products.module.css";
+import IndexStyle from "../../css/Index.module.css";
 
 function Products() {
   // fetched products
@@ -21,38 +23,52 @@ function Products() {
 
   return (
     <>
-      {categories.map((category) => (
-        <button
-          key={nanoid()}
-          onClick={() => setSearchParams({ category: `${MakeSlug(category)}` })}
-        >
-          {category}
-        </button>
-      ))}
+      <nav>
+        <ul className={style.filterNav}>
+          {categories.map((category) => (
+            <li
+              key={nanoid()}
+              onClick={() => setSearchParams({ category: `${MakeSlug(category)}` })}
+              className={IndexStyle.buttonV01}
+            >
+              {category}
+            </li>
+          ))}
 
-      {typeFilter && <button onClick={() => setSearchParams({})}>Clear Filter</button>}
+          {typeFilter && (
+            <li onClick={() => setSearchParams({})} className={IndexStyle.buttonV01}>
+              Clear Filter
+            </li>
+          )}
+        </ul>
+      </nav>
 
-      {displayedProducts.map((product) => (
-        <div key={nanoid()}>
-          <p>{product.category.toUpperCase()}</p>
+      <div className={style.displayedProducts}>
+        {displayedProducts.map((product) => (
+          <div key={nanoid()} className={style.product}>
+            <p className={style.productCategory}>{product.category.toUpperCase()}</p>
 
-          <img src={product.image} alt={product.title} />
+            <img src={product.image} alt={product.title} className={style.productsImg} />
 
-          <h2>
-            ${HandleDiscount(product.price)} <span>${product.price}</span>
-          </h2>
+            <p>
+              <span className={style.discount}>${HandleDiscount(product.price)}</span>{" "}
+              <span className={style.originalPrice}>${product.price}</span>
+            </p>
 
-          <h2>{product.title}</h2>
+            <h4 className={style.productTitle}>{product.title}</h4>
 
-          <p>
-            &#9733;{product.rating.rate}/5 ({product.rating.count})
-          </p>
+            <div className={style.productDetails}>
+              <p>
+                &#9733;{product.rating.rate}/5 ({product.rating.count})
+              </p>
 
-          <button>
-            <Link to={product.id.toString()}>View Details</Link>
-          </button>
-        </div>
-      ))}
+              <Link to={product.id.toString()} className={IndexStyle.buttonV01}>
+                View Details
+              </Link>
+            </div>
+          </div>
+        ))}
+      </div>
     </>
   );
 }
