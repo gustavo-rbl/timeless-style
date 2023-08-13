@@ -1,18 +1,20 @@
 .footer {
   composes: displayFlex from "../../css/Index.module.css";
-  composes: flexCenter from "../../css/Index.module.css";
   composes: backgroundClrPri from "../../css/Index.module.css";
+  align-items: center;
   flex-direction: column;
+  justify-content: center;
   margin-top: var(--size-3);
 }
 
 .services {
   composes: displayFlex from "../../css/Index.module.css";
-  composes: flexCenter from "../../css/Index.module.css";
   composes: gap from "../../css/Index.module.css";
   composes: resetUl from "../../css/Index.module.css";
+  align-items: center;
   flex-direction: column;
   gap: var(--size-1);
+  justify-content: center;
 }
 
 .social {
