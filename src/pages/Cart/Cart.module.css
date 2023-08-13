@@ -1,0 +1,57 @@
+.cartItem {
+  composes: displayFlex from "../../css/Index.module.css";
+  composes: textCenter from "../../css/Index.module.css";
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid var(--clr-gray-9);
+  border-radius: calc(var(--brd-rad-pri) * 2);
+  padding: var(--size-1);
+  margin-block: var(--size-2);
+}
+
+.cartImg {
+  width: clamp(80px, 20%, 130px);
+}
+
+.title {
+  font-size: var(--size-1);
+}
+
+.summary {
+  composes: displayFlex from "../../css/Index.module.css";
+  flex-direction: column;
+}
+
+.delete {
+  composes: buttonV01 from "../../css/Index.module.css";
+  font-size: var(--size-3);
+}
+
+.checkout {
+  composes: displayFlex from "../../css/Index.module.css";
+  composes: flexCenter from "../../css/Index.module.css";
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+@media (min-width: 768px) {
+  .cartItem {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .cartImg {
+    max-width: 10%;
+  }
+
+  .summary {
+    composes: displayFlex from "../../css/Index.module.css";
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .checkout {
+    flex-direction: row;
+  }
+}
