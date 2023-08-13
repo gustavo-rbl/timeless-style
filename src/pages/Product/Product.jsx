@@ -1,6 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 import { HandleDiscount } from "../../modules/HandleDiscount";
 import QuantityForm from "../../components/QuantityForm/QuantityForm";
+import style from "./Product.module.css";
+import IndexStyle from "../../css/Index.module.css";
 
 function Product() {
   // fetched product
@@ -9,7 +11,7 @@ function Product() {
   return (
     <>
       <div>
-        <img src={product.image} alt={product.title} />
+        <img src={product.image} alt={product.title} className={style.productImg} />
 
         <h2>{product.title}</h2>
 
@@ -20,7 +22,8 @@ function Product() {
         <p>{product.description}</p>
 
         <p>
-          ${HandleDiscount(product.price)} <span>${product.price}</span>
+          <span className={IndexStyle.discount}>${HandleDiscount(product.price)}</span>{" "}
+          <span className={IndexStyle.originalPrice}>${product.price}</span>
         </p>
       </div>
 
