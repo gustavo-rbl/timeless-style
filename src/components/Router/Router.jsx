@@ -18,7 +18,6 @@ import About from "../../pages/Company/About/About";
 import Contact from "../../pages/Company/Contact/Contact";
 import PrivacyPolicy from "../../pages/Company/PrivacyPolicy/PrivacyPolicy";
 import NotFound from "../../pages/Error/NotFound/NotFound";
-import ProductError from "../../pages/Error/ProductError/ProductError";
 import TeamError from "../../pages/Error/AboutError/AboutError";
 
 // loader
@@ -35,14 +34,14 @@ function Router() {
           path="products"
           element={<Products />}
           loader={ProductsLoader}
-          errorElement={<ProductError />}
+          errorElement={<NotFound />}
         />
 
         <Route
           path="products/:id"
           element={<Product />}
           loader={ProductsLoader}
-          errorElement={<ProductError />}
+          errorElement={<NotFound />}
         />
 
         <Route path="company" element={<CompanyLayout />}>
