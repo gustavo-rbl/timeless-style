@@ -2,6 +2,7 @@ import { nanoid } from "nanoid";
 import { useLoaderData } from "react-router-dom";
 import style from "./About.module.css";
 import IndexStyle from "../../../css/Index.module.css";
+import Animation from "../../../css/Animation.module.css";
 
 function About() {
   const team = useLoaderData();
@@ -17,7 +18,7 @@ function About() {
   ));
 
   return (
-    <>
+    <div className={Animation.fadeIn}>
       <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, tempora iste quas
@@ -34,7 +35,7 @@ function About() {
 
       <h2>Meet our Team:</h2>
       <div className={style.team}>{members}</div>
-    </>
+    </div>
   );
 }
 

@@ -1,9 +1,9 @@
 import { NavLink, Outlet } from "react-router-dom";
 import IndexStyle from "../../css/Index.module.css";
-
+import Animation from "../../css/Animation.module.css";
 function CompanyLayout() {
   return (
-    <>
+    <div className={Animation.fadeIn}>
       <h2>Company</h2>
 
       <nav>
@@ -39,7 +39,7 @@ function CompanyLayout() {
       </nav>
 
       <Outlet />
-    </>
+    </div>
   );
 }
 

@@ -5,6 +5,7 @@ import { HandleDiscount } from "../../modules/HandleDiscount";
 import useCartStore from "../../store/Store";
 import style from "./Product.module.css";
 import IndexStyle from "../../css/Index.module.css";
+import Animation from "../../css/Animation.module.css";
 import { FaCircleXmark } from "react-icons/fa6";
 
 function Product() {
@@ -57,16 +58,21 @@ function Product() {
 
     setAdded(false);
   };
+
   return (
-    <>
+    <div className={Animation.fadeIn}>
       <img src={product.image} alt={product.img} className={style.productImg} />
+
       <h2>{product.title}</h2>
 
       {added ? (
         <>
           <h4>Has been added to your cart.</h4>
+
           <h4>Quantity: {order.itemQuantity}</h4>
+
           <h4>Total: ${order.total.toFixed(2)}</h4>
+
           <FaCircleXmark className={style.closeIcon} onClick={handleClose} />
         </>
       ) : (
@@ -102,7 +108,7 @@ function Product() {
           </form>
         </>
       )}
-    </>
+    </div>
   );
 }
 

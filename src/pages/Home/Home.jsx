@@ -3,11 +3,12 @@ import { discount } from "../../modules/HandleDiscount";
 import { add, format } from "date-fns";
 import style from "./Home.module.css";
 import IndexStyle from "../../css/Index.module.css";
+import Animation from "../../css/Animation.module.css";
 import { FaShirt, FaTruckFast, FaTicket } from "react-icons/fa6";
 
 function Home() {
   return (
-    <>
+    <div className={Animation.fadeIn}>
       <div className={style.sale}>
         <div className={style.saleArea1}>
           <p className={IndexStyle.textSize3}>Big Sale</p>
@@ -142,7 +143,7 @@ function Home() {
 
         <button className={IndexStyle.buttonV01}>Sign up</button>
       </form>
-    </>
+    </div>
   );
 }
 

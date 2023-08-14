@@ -4,6 +4,7 @@ import { HandleDiscount } from "../../modules/HandleDiscount";
 import MakeSlug from "../../modules/MakeSlug";
 import style from "./Products.module.css";
 import IndexStyle from "../../css/Index.module.css";
+import Animation from "../../css/Animation.module.css";
 
 function Products() {
   // fetched products
@@ -22,7 +23,7 @@ function Products() {
     : products;
 
   return (
-    <>
+    <div className={Animation.fadeIn}>
       <nav>
         <ul className={style.filterNav}>
           {categories.map((category) => {
@@ -74,7 +75,7 @@ function Products() {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }
 

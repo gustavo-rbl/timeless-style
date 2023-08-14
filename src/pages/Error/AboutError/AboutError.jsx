@@ -1,8 +1,9 @@
 import style from "./AboutError.module.css";
+import Animation from "../../../css/Animation.module.css";
 
 function AboutError() {
   return (
-    <>
+    <div className={Animation.fadeIn}>
       <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h2>
 
       <p>
@@ -45,7 +46,7 @@ function AboutError() {
         sed natus. Magnam, consectetur similique eos ex ea at saepe earum repellat ipsa porro culpa
         laborum recusandae? Amet provident voluptate similique dignissimos.
       </p>
-    </>
+    </div>
   );
 }
 

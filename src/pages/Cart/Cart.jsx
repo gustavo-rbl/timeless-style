@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import IndexStyle from "../../css/Index.module.css";
 import style from "./Cart.module.css";
 import { FaTrashCan } from "react-icons/fa6";
+import Animation from "../../css/Animation.module.css";
 
 function Cart() {
   const cart = useCartStore((store) => store.cart);
@@ -12,14 +13,14 @@ function Cart() {
   return (
     <>
       {cart.length === 0 ? (
-        <div>
+        <div className={Animation.fadeIn}>
           <p>There&#39;s nothing in your shopping cart, but the possibilities are endless!</p>
           <Link to=".." relative="path" className={IndexStyle.buttonV01}>
             Start Shopping
           </Link>
         </div>
       ) : (
-        <>
+        <div className={Animation.fadeIn}>
           {cart.map((order) => (
             <div key={order.orderID} className={style.cartItem}>
               <img src={order.img} alt={order.item} className={style.cartImg} />
@@ -41,7 +42,7 @@ function Cart() {
             <p>Total: ${getTotal().toFixed(2)}</p>
             <button className={IndexStyle.buttonV01}>Checkout</button>
           </div>
-        </>
+        </div>
       )}
     </>
   );

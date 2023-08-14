@@ -1,5 +1,6 @@
 import IndexStyle from "../../../css/Index.module.css";
 import style from "./Contact.module.css";
+import Animation from "../../../css/Animation.module.css";
 
 function Contact() {
   const handleSubmit = (e) => {
@@ -7,7 +8,7 @@ function Contact() {
   };
 
   return (
-    <>
+    <div className={Animation.fadeIn}>
       <h2>Lorem ipsum dolor sit amet?</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non eum culpa dolorem ullam sed
@@ -35,7 +36,7 @@ function Contact() {
 
         <button className={IndexStyle.buttonV01}>Submit</button>
       </form>
-    </>
+    </div>
   );
 }
 

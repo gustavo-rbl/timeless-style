@@ -1,6 +1,8 @@
+import Animation from "../../../css/Animation.module.css";
+
 function PrivacyPolicy() {
   return (
-    <>
+    <div className={Animation.fadeIn}>
       <h2>Lorem, ipsum.</h2>
 
       <p>
@@ -144,7 +146,7 @@ function PrivacyPolicy() {
         consequuntur id saepe unde cum, expedita odit dicta sit suscipit repellat eum omnis beatae,
         placeat aliquid. Architecto, iure!
       </p>
-    </>
+    </div>
   );
 }
 

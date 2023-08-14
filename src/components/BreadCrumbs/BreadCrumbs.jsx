@@ -1,6 +1,7 @@
 import { nanoid } from "nanoid";
 import { Link, useLocation } from "react-router-dom";
 import style from "./BreadCrumbs.module.css";
+import Animation from "../../css/Animation.module.css";
 
 function BreadCrumbs() {
   const { pathname } = useLocation();
@@ -20,7 +21,7 @@ function BreadCrumbs() {
       );
     });
 
-  return <div className={style.breadCrumbs}>{crumbs}</div>;
+  return <div className={`${style.breadCrumbs} ${Animation.fadeIn}`}>{crumbs}</div>;
 }
 
 export default BreadCrumbs;
