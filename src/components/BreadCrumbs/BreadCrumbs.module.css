@@ -1,0 +1,19 @@
+.breadCrumbs > * {
+  display: inline-block;
+  margin-right: var(--size-0);
+}
+
+.crumb::after {
+  content: ">";
+  margin-left: var(--size-0);
+}
+
+.crumb {
+  color: var(--clr-gray-5);
+  font-size: calc(var(--size-1) * 0.8);
+  text-decoration: transparent;
+}
+
+.crumb:last-child::after {
+  content: none;
+}
