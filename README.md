@@ -1,6 +1,6 @@
 # timeless-style
 
-TimelessStyle is fully functional ecommerce website built with React. It allows users to browse products, add them to cart, and manage their orders. I created this project to practice my skills in React, React Router, fetching data in React, Zustand state management, and ecommerce development. You can view the live demo here.
+TimelessStyle is fully functional ecommerce website built with React. It allows users to browse products, add them to cart, and manage their orders. I created this project to practice my skills in React, React Router, fetching data in React, Zustand state management, and ecommerce development. You can view the live demo [here](https://gustavo-rbl.github.io/timeless-style/).
 
 ## Features
 
@@ -20,13 +20,15 @@ To install and run this project locally, you will need Node.js and npm installed
 
 1. Clone this repository
 
+SSH:
+
 ```sh
-SSH
 git clone git@github.com:gustavo-rbl/timeless-style.git
 ```
 
+HTTPS:
+
 ```sh
-HTTPS
 git clone https://github.com/gustavo-rbl/timeless-style.git
 ```
 
@@ -34,6 +36,9 @@ git clone https://github.com/gustavo-rbl/timeless-style.git
 
 ```sh
 cd timeless-style
+```
+
+```sh
 npm install
 ```
 
