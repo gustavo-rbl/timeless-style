@@ -1,0 +1,18 @@
+.aboutDisplay {
+  composes: displayFlex from "../../../css/Index.module.css";
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--size-3);
+}
+
+.banner {
+  max-width: 300px;
+}
+
+@media (min-width: 768px) {
+  .aboutDisplay {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}

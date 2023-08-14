@@ -19,6 +19,7 @@ import Contact from "../../pages/Company/Contact/Contact";
 import PrivacyPolicy from "../../pages/Company/PrivacyPolicy/PrivacyPolicy";
 import NotFound from "../../pages/Error/NotFound/NotFound";
 import ProductError from "../../pages/Error/ProductError/ProductError";
+import TeamError from "../../pages/Error/AboutError/AboutError";
 
 // loader
 import ProductsLoader from "../../loader/ProductsLoader";
@@ -45,7 +46,7 @@ function Router() {
         />
 
         <Route path="company" element={<CompanyLayout />}>
-          <Route index element={<About />} loader={TeamLoader} />
+          <Route index element={<About />} loader={TeamLoader} errorElement={<TeamError />} />
           <Route path="contact" element={<Contact />} />
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
         </Route>
