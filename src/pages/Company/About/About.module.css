@@ -1,0 +1,32 @@
+.team {
+  composes: gap from "../../../css/Index.module.css";
+  display: grid;
+}
+
+.member {
+  text-align: center;
+}
+
+.memberImage {
+  composes: priBorder from "../../../css/Index.module.css";
+  border-radius: 50%;
+  max-width: 100px;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .team {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .member {
+    composes: gap from "../../../css/Index.module.css";
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+
+  .memberImage {
+    margin: 0;
+  }
+}
