@@ -1,0 +1,10 @@
+.contactForm {
+  composes: gap from "../../../css/Index.module.css";
+  display: grid;
+  margin: auto;
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+}

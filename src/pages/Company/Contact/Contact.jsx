@@ -1,3 +1,6 @@
+import IndexStyle from "../../../css/Index.module.css";
+import style from "./Contact.module.css";
+
 function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -11,7 +14,7 @@ function Contact() {
         quisquam suscipit, adipisci quis excepturi obcaecati ad inventore quibusdam, id sequi.
       </p>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className={style.contactForm}>
         <section>
           <label htmlFor="name">Your Name:</label>
           <br />
@@ -27,10 +30,10 @@ function Contact() {
         <section>
           <label htmlFor="message">Your Message</label>
           <br />
-          <textarea name="message" id="message" required></textarea>
+          <textarea name="message" id="message" rows="10" maxLength="1000" required></textarea>
         </section>
 
-        <button>Submit</button>
+        <button className={IndexStyle.buttonV01}>Submit</button>
       </form>
     </>
   );
