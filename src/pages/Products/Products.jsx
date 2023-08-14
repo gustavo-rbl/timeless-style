@@ -25,15 +25,20 @@ function Products() {
     <>
       <nav>
         <ul className={style.filterNav}>
-          {categories.map((category) => (
-            <li
-              key={nanoid()}
-              onClick={() => setSearchParams({ category: `${MakeSlug(category)}` })}
-              className={IndexStyle.buttonV01}
-            >
-              {category}
-            </li>
-          ))}
+          {categories.map((category) => {
+            const isActive =
+              typeFilter === MakeSlug(category) ? IndexStyle.buttonV02 : IndexStyle.buttonV01;
+
+            return (
+              <li
+                key={nanoid()}
+                onClick={() => setSearchParams({ category: `${MakeSlug(category)}` })}
+                className={isActive}
+              >
+                {category}
+              </li>
+            );
+          })}
 
           {typeFilter && (
             <li onClick={() => setSearchParams({})} className={IndexStyle.buttonV01}>
