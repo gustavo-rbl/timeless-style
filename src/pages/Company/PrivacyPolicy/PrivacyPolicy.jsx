@@ -1,6 +1,9 @@
 import Animation from "../../../css/Animation.module.css";
+import SetTitle from "../../../modules/SetTitle";
 
 function PrivacyPolicy() {
+  SetTitle("Privacy Policy");
+
   return (
     <div className={Animation.fadeIn}>
       <h2>Lorem, ipsum.</h2>

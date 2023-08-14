@@ -1,11 +1,15 @@
 import IndexStyle from "../../../css/Index.module.css";
 import style from "./Contact.module.css";
 import Animation from "../../../css/Animation.module.css";
+import SetTitle from "../../../modules/SetTitle";
 
 function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
+
+  // set page title
+  SetTitle("Contact");
 
   return (
     <div className={Animation.fadeIn}>

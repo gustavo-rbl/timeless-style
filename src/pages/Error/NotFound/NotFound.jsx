@@ -2,8 +2,11 @@ import { Link } from "react-router-dom";
 import IndexStyle from "../../../css/Index.module.css";
 import Animation from "../../../css/Animation.module.css";
 import errorImg from "../../../assets/img/errorImg.svg";
+import SetTitle from "../../../modules/SetTitle";
 
 function NotFound() {
+  SetTitle("Not Found");
+
   return (
     <div className={Animation.fadeIn}>
       <h2>Uh oh...</h2>

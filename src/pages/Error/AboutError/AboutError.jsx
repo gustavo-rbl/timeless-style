@@ -1,7 +1,10 @@
 import style from "./AboutError.module.css";
 import Animation from "../../../css/Animation.module.css";
+import SetTitle from "../../../modules/SetTitle";
 
 function AboutError() {
+  SetTitle("About");
+
   return (
     <div className={Animation.fadeIn}>
       <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h2>

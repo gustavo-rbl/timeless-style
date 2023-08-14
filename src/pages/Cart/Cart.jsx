@@ -4,11 +4,15 @@ import IndexStyle from "../../css/Index.module.css";
 import style from "./Cart.module.css";
 import { FaTrashCan } from "react-icons/fa6";
 import Animation from "../../css/Animation.module.css";
+import SetTitle from "../../modules/SetTitle";
 
 function Cart() {
   const cart = useCartStore((store) => store.cart);
   const deleteFromCart = useCartStore((store) => store.deleteFromCart);
   const getTotal = useCartStore((store) => store.getTotal);
+
+  // set page title
+  SetTitle("Cart");
 
   return (
     <>

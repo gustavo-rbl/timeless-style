@@ -7,6 +7,7 @@ import style from "./Product.module.css";
 import IndexStyle from "../../css/Index.module.css";
 import Animation from "../../css/Animation.module.css";
 import { FaCircleXmark } from "react-icons/fa6";
+import SetTitle from "../../modules/SetTitle";
 
 function Product() {
   // fetched product
@@ -58,6 +59,9 @@ function Product() {
 
     setAdded(false);
   };
+
+  // set page title
+  SetTitle(product.title);
 
   return (
     <div className={Animation.fadeIn}>

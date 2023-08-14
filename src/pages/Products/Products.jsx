@@ -5,6 +5,7 @@ import MakeSlug from "../../modules/MakeSlug";
 import style from "./Products.module.css";
 import IndexStyle from "../../css/Index.module.css";
 import Animation from "../../css/Animation.module.css";
+import SetTitle from "../../modules/SetTitle";
 
 function Products() {
   // fetched products
@@ -21,6 +22,9 @@ function Products() {
   const displayedProducts = typeFilter
     ? products.filter((product) => MakeSlug(product.category) === typeFilter)
     : products;
+
+  // set page title
+  SetTitle("Products");
 
   return (
     <div className={Animation.fadeIn}>

@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import style from "./About.module.css";
 import IndexStyle from "../../../css/Index.module.css";
 import Animation from "../../../css/Animation.module.css";
+import SetTitle from "../../../modules/SetTitle";
 
 function About() {
   const team = useLoaderData();
@@ -16,6 +17,9 @@ function About() {
       </div>
     </div>
   ));
+
+  // set page title
+  SetTitle("About");
 
   return (
     <div className={Animation.fadeIn}>
