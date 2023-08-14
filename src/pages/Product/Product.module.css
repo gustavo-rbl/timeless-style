@@ -1,3 +1,10 @@
+.closeIcon {
+  composes: backgroundClrSec from "../../css/Index.module.css";
+  composes: cursorPointer from "../../css/Index.module.css";
+  border-radius: 50%;
+  font-size: var(--size-3);
+}
+
 @media (min-width: 768px) {
   .productImg {
     max-width: 40%;
