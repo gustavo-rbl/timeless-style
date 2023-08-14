@@ -22,6 +22,7 @@ import ProductError from "../../pages/Error/ProductError/ProductError";
 
 // loader
 import ProductsLoader from "../../loader/ProductsLoader";
+import TeamLoader from "../../loader/TeamLoader";
 
 function Router() {
   const router = createBrowserRouter(
@@ -44,7 +45,7 @@ function Router() {
         />
 
         <Route path="company" element={<CompanyLayout />}>
-          <Route index element={<About />} />
+          <Route index element={<About />} loader={TeamLoader} />
           <Route path="contact" element={<Contact />} />
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
         </Route>
