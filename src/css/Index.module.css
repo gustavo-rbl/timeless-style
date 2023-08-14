@@ -1,0 +1,135 @@
+.backgroundGrad {
+  background-image: var(--grad-pri);
+}
+
+.backgroundClrPri {
+  background-color: var(--clr-accent-2);
+  color: var(--clr-gray-0);
+}
+
+.backgroundClrSec {
+  background-color: var(--clr-gray-0);
+  color: var(--clr-accent-2);
+  border: 1px solid var(--clr-gray-9);
+}
+
+.colorGray5 {
+  color: var(--clr-gray-5);
+}
+
+.displayFlex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gap {
+  gap: var(--size-1);
+}
+
+.gap2 {
+  gap: var(--size-2);
+}
+
+.resetUl {
+  list-style: none;
+  padding-left: 0;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.textRight {
+  text-align: right;
+}
+
+.fontWeight400 {
+  font-weight: 400;
+}
+
+.textSize3 {
+  font-size: var(--size-3);
+}
+
+.textSize4 {
+  font-size: var(--size-4);
+}
+
+.textBold {
+  font-weight: bold;
+}
+
+.size2 {
+  font-size: var(--size-2);
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+
+.priTransition {
+  transition: all var(--pri-transition);
+}
+
+.gradientText {
+  composes: backgroundGrad;
+  background-color: var(--clr-accent-1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.iconV01 {
+  composes: priTransition;
+  color: var(--clr-gray-9);
+  height: max-content;
+  width: max-content;
+}
+
+.iconV01:hover {
+  color: var(--clr-accent-2);
+}
+
+.buttonV01 {
+  composes: backgroundClrPri;
+  composes: priTransition;
+  composes: cursorPointer;
+  border-radius: var(--brd-rad-pri);
+  border: none;
+  padding: calc(var(--size-0) / 2) var(--size-1);
+  text-decoration: none;
+}
+
+.buttonV01:hover {
+  background-color: var(--clr-gray-0);
+  color: var(--clr-accent-2);
+  outline: 2px solid var(--clr-gray-9);
+}
+
+.buttonV02 {
+  composes: backgroundClrSec;
+  composes: priTransition;
+  composes: cursorPointer;
+  padding: calc(var(--size-0) / 2) var(--size-1);
+  text-decoration: none;
+}
+
+.buttonV02:hover {
+  background-color: var(--clr-accent-2);
+  color: var(--clr-gray-0);
+}
+
+.discount {
+  color: var(--clr-accent-2);
+  font-size: var(--size-fluid-2);
+}
+
+.originalPrice {
+  color: var(--clr-gray-5);
+  text-decoration: line-through;
+}
+
+.wrapper {
+  max-width: 2500px;
+  margin: auto;
+}

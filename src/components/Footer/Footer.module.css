@@ -9,20 +9,20 @@
 
 .services {
   composes: displayFlex from "../../css/Index.module.css";
-  composes: gap from "../../css/Index.module.css";
   composes: resetUl from "../../css/Index.module.css";
+  composes: gap from "../../css/Index.module.css";
   align-items: center;
   flex-direction: column;
-  gap: var(--size-1);
   justify-content: center;
 }
 
 .social {
   composes: resetUl from "../../css/Index.module.css";
   composes: displayFlex from "../../css/Index.module.css";
-  composes: flexCenter from "../../css/Index.module.css";
+  composes: gap from "../../css/Index.module.css";
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
-  gap: var(--size-2);
 }
 
 .social a {

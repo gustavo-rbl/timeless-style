@@ -32,12 +32,8 @@ function About() {
       </p>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
-      {team && (
-        <>
-          <h2>Meet our Team:</h2>
-          <div className={style.team}>{members}</div>
-        </>
-      )}
+      <h2>Meet our Team:</h2>
+      <div className={style.team}>{members}</div>
     </>
   );
 }

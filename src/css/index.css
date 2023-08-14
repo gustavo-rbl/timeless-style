@@ -1,0 +1,69 @@
+/* font  */
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
+
+/* custom variables */
+:root {
+  --font-pri: "Hind", sans-serif;
+  --font-sec: "Montserrat", sans-serif;
+
+  --size-0: 0.5rem;
+  --size-1: 1rem;
+  --size-2: 2rem;
+  --size-3: 3rem;
+  --size-4: 4rem;
+  --size-5: 5rem;
+
+  --size-fluid-1: clamp(1rem, 1vw, 1.1rem);
+  --size-fluid-2: clamp(1.5rem, 3vw, 2rem);
+
+  --clr-accent-1: hsl(207, 97%, 44%);
+  --clr-accent-2: hsl(337, 85%, 31%);
+  --clr-gray-0: hsl(210, 20%, 98%);
+  --clr-gray-5: hsl(160, 1%, 41%);
+  --clr-gray-9: hsl(60, 6%, 7%);
+
+  --grad-pri: linear-gradient(to top left, var(--clr-accent-2) 20%, var(--clr-accent-1));
+  --brd-pri: 1px solid var(--clr-gray-5);
+  --delay-pri: 250ms;
+  --pri-transition: var(--delay-pri) ease-in-out;
+  --box-shadow-inset: inset 0px -2px 0px 0px;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* core body defaults */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-pri);
+  font-size: var(--size-fluid-1);
+}
+
+main {
+  margin: auto;
+  max-width: 1200px;
+  min-height: 90vh;
+  padding-inline: var(--size-1);
+}
+
+header {
+  position: relative;
+}
+
+h2,
+h3 {
+  font-family: var(--font-sec);
+  font-size: var(--size-fluid-2);
+}
+
+img {
+  display: block;
+  width: 100%;
+}

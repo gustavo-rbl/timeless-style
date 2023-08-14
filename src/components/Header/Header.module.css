@@ -31,7 +31,8 @@
 .navLinks {
   composes: resetUl from "../../css/Index.module.css";
   composes: displayFlex from "../../css/Index.module.css";
-  composes: flexCenter from "../../css/Index.module.css";
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   gap: var(--size-3);
   padding: var(--size-5) var(--size-1) var(--size-3);
@@ -67,6 +68,7 @@
 
   .hero {
     text-align: left;
+    margin: 0;
   }
 
   .nav {

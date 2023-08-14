@@ -13,7 +13,7 @@
 }
 
 .product {
-  composes: priBorder from "../../css/Index.module.css";
+  border: var(--brd-pri);
   padding: 0 var(--size-1);
 }
 

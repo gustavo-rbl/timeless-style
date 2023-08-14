@@ -8,7 +8,6 @@
 }
 
 .memberImage {
-  composes: priBorder from "../../../css/Index.module.css";
   border-radius: 50%;
   max-width: 100px;
   margin: auto;
